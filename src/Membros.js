@@ -11,9 +11,17 @@ export default class Membros extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <p>lol membro</p>
-        <a href="" onClick={this.logout}>Logout</a>
+      <div className="fadeIn animated membros">
+        <header>
+          <nav className="text-right">
+            <ul>
+              <li><i className="fa fa-unlock"></i>&nbsp;  <a href="" onClick={this.logout}>Logout</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div style={{padding:'30px'}}>
+          <p>Área de membros</p>
+        </div>
       </div>
     )
   }

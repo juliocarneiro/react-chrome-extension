@@ -20,7 +20,7 @@ class App extends Component {
       this.setState({
         loading:false,
       })
-    }.bind(this), 1000);
+    }.bind(this), 500);
   }
 
   authListener(){
@@ -37,18 +37,23 @@ class App extends Component {
   }
 
   render() {
-
+    const loader = (
+      <div className="load">
+        <div id="space-loader"></div>
+        <div id="loader"></div><br />
+        <p style={{fontSize:'14px', color:'white'}}>Carregando...</p>
+      </div>
+    )
     const children = (
-      <div>
+      <div style={{width:'400px', height:'400px'}}>
         <Switch>
             <Route path="/" component={this.state.user ? (Membros) : (Login)} />
-            <Route path="/membros" component={Membros}/>
         </Switch>
       </div>
     )
     return (
       <div className="">
-        {children}
+        {this.state.loading ? loader : children}
       </div>
     );
   }

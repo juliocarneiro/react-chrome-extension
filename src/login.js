@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './index.css';
-
 import fire from './config/Fire'
 
 class Login extends Component {
@@ -43,20 +41,22 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className="fadeIn animated" style={{padding:'30px'}}>
         <div className="home">
-          <div className="container" style={{margin:'50px'}}>
-            <form className="col-lg-6 animated fadeInLeft">
+          <div className="">
+            <form className="">
               <div className="form-group">
-                <h1 style={{marginTop:'0px'}}>Área para membros</h1>
+                <h2 style={{marginTop:'0px', marginBottom:'30px', textAlign:'center'}}><i className="fa fa-lock" style={{fontSize:'60px', marginBottom:'10px'}}></i><br />JC Members Ext</h2>
                 <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" className="" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu email..." required />
               </div>
               <div className="form-group">
                 <input  value={this.state.password} onChange={this.handleChange} type="password" name="password" className="" id="exampleInputPassword1" placeholder="Digite sua senha..." required />
                 <p>{this.state.error}</p>
               </div>
+             <div className="text-center">
               <button type="submit" onClick={this.login} style={{marginRight:"10px"}} className="">Login</button>
               <button onClick={this.signup} className="cadastrar">Cadastrar</button>
+             </div>
             </form>
           </div>
         </div>

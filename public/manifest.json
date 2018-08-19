@@ -1,10 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "React Extension",
+  "short_name": "JC.com.br",
+  "name": "JC Extension",
   "manifest_version": 2,
   "browser_action": {
     "default_popup": "index.html",
-    "default_title": "React Ext"
+    "default_title": "JC Ext"
   },
   "permissions": [
     "activeTab"
